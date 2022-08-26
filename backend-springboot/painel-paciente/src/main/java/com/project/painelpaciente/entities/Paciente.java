@@ -46,8 +46,8 @@ public class Paciente {
     @Column(name = "dataEntrada",nullable = false) //Atributo a ser preenchido automaticamente pelo sistema, com a hora de data de entrada no atendimento.
     private String dataEntrada;
 
-    @Column(name = "idMedicoResponsavel",nullable = false)
-    private long idMedicoResponsavel;
+    // @Column(name = "idMedicoResponsavel",nullable = false)
+    // private long idMedicoResponsavel;
 
     public String getNome() {
         return nome;
@@ -105,11 +105,11 @@ public class Paciente {
         this.dataEntrada = dataEntrada;
     }
 
-    public long getIdMedicoResponsavel() {
-        return idMedicoResponsavel;
-    }
+    // public long getIdMedicoResponsavel() {
+    //     return idMedicoResponsavel;
+    // }
 
-    public void setIdMedicoResponsavel(long idMedicoResponsavel) {
-        this.idMedicoResponsavel = idMedicoResponsavel;
-    }
+    // public void setIdMedicoResponsavel(long idMedicoResponsavel) {
+    //     this.idMedicoResponsavel = idMedicoResponsavel;
+    // }
 }
