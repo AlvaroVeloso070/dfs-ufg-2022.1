@@ -1,11 +1,21 @@
 import React from "react";
 import './App.css';
-import RegisterPage from "./RegisterPage/RegisterPage";
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 
 const App = () => {
   return(
-    <RegisterPage/>
+    // <LoginPage/>
+    // <RegisterPage/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage/>}></Route>
+        <Route path="/register" element = {<RegisterPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -11,12 +11,12 @@ const inicialValues = {
 
 const RegisterForm = () => {
 
-    const [values, setValues] = useState(inicialValues)
+    const [values, setValues] = useState(inicialValues);
 
     function onChange(event) {
         const{name, value} = event.target;
 
-        setValues({... values, [name]: value});
+        setValues({...values, [name]: value}); 
     }
 
     const persist = () => {
@@ -40,12 +40,12 @@ const RegisterForm = () => {
         const url = "http://localhost:8080/cadastros";
 
         fetch(url, requestOptions)
-            .then(console.log("Gravado"))
+            .then(alert("O usuário foi cadastrado com sucesso!"))
             .catch(erro => console.log(erro))
     }
 
   return (
-    <div className='register-form'>
+    <form className='register-form'>
         <h1>CADASTRO</h1>
         <div className="textfield">
               <label htmlFor="nome">Nome</label>
@@ -79,9 +79,9 @@ const RegisterForm = () => {
             </div>
         </div>
 
-        <button onClick={persist} className='btn-register'>Cadastrar</button>
+        <button onClick={persist} type="submit" className='btn-register'>Cadastrar</button>
 
-    </div>
+    </form>
   )
 }
 
