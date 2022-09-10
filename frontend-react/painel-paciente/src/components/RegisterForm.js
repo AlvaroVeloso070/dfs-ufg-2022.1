@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import {useNavigate } from 'react-router-dom';
 
 const inicialValues = {
     "nome": "",
@@ -9,9 +10,24 @@ const inicialValues = {
     "telefone": ""
 }
 
+const url = "http://localhost:8080/cadastros";
+
+
 const RegisterForm = () => {
 
-    const [values, setValues] = useState(inicialValues);
+const [values, setValues] = useState(inicialValues);
+const [data, setData] = useState([]);
+const navigate = useNavigate();
+
+useEffect(() =>{
+
+    (async () =>{
+        const res = await fetch(url);
+        const data = await res.json();
+        setData(data);
+      })();
+    },[]);
+  
 
     function onChange(event) {
         const{name, value} = event.target;
@@ -20,6 +36,19 @@ const RegisterForm = () => {
     }
 
     const persist = () => {
+        var usedEmail = false;
+        try{
+            data.forEach((item) => {
+              if(item.email === values.email){
+                usedEmail = true;
+                alert("Email já cadastrado!");
+              }
+            })
+          }
+          catch(e){
+            alert(e);
+          };
+
         const requestOptions = {
             method: 'POST',
             headers: {
@@ -39,9 +68,12 @@ const RegisterForm = () => {
 
         const url = "http://localhost:8080/cadastros";
 
-        fetch(url, requestOptions)
+        if(usedEmail === false){
+            fetch(url, requestOptions)
             .then(alert("O usuário foi cadastrado com sucesso!"))
             .catch(erro => console.log(erro))
+            navigate("/");
+        }
     }
 
   return (
