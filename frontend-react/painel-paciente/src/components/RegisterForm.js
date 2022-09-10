@@ -10,7 +10,7 @@ const inicialValues = {
     "telefone": ""
 }
 
-const url = "http://localhost:8080/cadastros";
+const url = "https://ufg-cadastros-api.herokuapp.com/cadastros";
 
 
 const RegisterForm = () => {
@@ -66,8 +66,6 @@ useEffect(() =>{
             })
         };
 
-        const url = "http://localhost:8080/cadastros";
-
         if(usedEmail === false){
             fetch(url, requestOptions)
             .then(alert("O usuário foi cadastrado com sucesso!"))
@@ -95,7 +93,7 @@ useEffect(() =>{
             <div className='textfield' id='tipoPessoaLabel'>
                 <label htmlFor='tipoPessoa'>Você é: </label>
                 <select onChange={onChange} className="select-pessoa" name="tipo_pessoa" id="pessoa" required>
-                    <option value="Escolha uma opção..." disabled>Escolha uma opção...</option>
+                    <option >Escolha uma opção</option>
                     <option value="Paciente">Paciente</option>
                     <option value="Médico">Médico</option>
                     <option value="Acompanhante">Acompanhante</option>

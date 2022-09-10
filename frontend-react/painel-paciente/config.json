@@ -1,3 +1,4 @@
 {
-    "url": "http://localhost:8080"
+    "urlPainelPaciente": "https://ufg-painel-paciente-api.herokuapp.com",
+    "urlCadastros": "https://ufg-cadastros-api.herokuapp.com"
 }

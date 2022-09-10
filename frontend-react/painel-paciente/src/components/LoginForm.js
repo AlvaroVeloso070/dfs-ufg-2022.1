@@ -4,6 +4,8 @@ import './LoginForm.css';
 
 export const LoginForm = () => {
 
+
+
   const inicialValues = {
     "email": "",
     "senha": ""
@@ -12,8 +14,9 @@ export const LoginForm = () => {
 
   var registered = false;
 
-  const url = "http://localhost:8080/cadastros";
+  const url = "https://ufg-cadastros-api.herokuapp.com/cadastros";
   const [data, setData] = useState([]);
+
 
   let navigate = useNavigate();
 
@@ -28,6 +31,7 @@ export const LoginForm = () => {
         if(item.email === values.email && item.senha === values.senha){
           alert("Bem vindo "+item.nome+"!");
           registered = true;
+          sessionStorage.setItem('activeUser', JSON.stringify(item));
           navigate("/home");
         }
       })

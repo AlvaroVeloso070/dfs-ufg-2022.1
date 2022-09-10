@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -6,11 +6,8 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import { HomePage } from "./pages/HomePage/HomePage";
 
-
 const App = () => {
   return(
-    // <LoginPage/>
-    // <RegisterPage/>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage/>}/>

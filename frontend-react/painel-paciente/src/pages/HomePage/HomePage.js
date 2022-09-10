@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { HomeComponent } from '../../components/HomeComponent';
+import { NavBar } from '../../components/NavBar';
+import './HomePage.css';
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <NavBar/>
+      <HomeComponent/>
+    </div>
   )
 }
