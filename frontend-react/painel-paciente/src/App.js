@@ -8,6 +8,8 @@ import { HomePage } from "./pages/HomePage/HomePage";
 import { MedicosPage } from "./pages/MedicosPage/MedicosPage";
 import { PacientesPage } from "./pages/PacientesPage/PacientesPage";
 import { CadastrosPage } from "./pages/CadastrosPage/CadastrosPage";
+import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
+import { AboutPage } from "./pages/AboutPage/AboutPage";
 
 const App = () => {
   return(
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/medicos" element = {<MedicosPage/>}/>
         <Route path="/pacientes" element = {<PacientesPage/>}/>
         <Route path="/cadastros" element = {<CadastrosPage/>}/>
+        <Route path="/profile" element = {<ProfilePage/>}/>
+        <Route path="/about" element = {<AboutPage/>}/>
       </Routes>
     </BrowserRouter>
   );

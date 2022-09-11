@@ -79,11 +79,11 @@ useEffect(() =>{
         <h1>CADASTRO</h1>
         <div className="textfield">
               <label htmlFor="nome">Nome</label>
-              <input onChange={onChange} id='nome' type="text" name="nome" placeholder="Nome" required/>
+              <input onChange={onChange} id='nome-register' type="text" name="nome" placeholder="Nome" required/>
         </div>
         <div className="textfield">
               <label htmlFor="email">Email</label>
-              <input onChange={onChange} type="text" id='email' name="email" placeholder="Email" required></input>
+              <input onChange={onChange} type="text" id='email-register' name="email" placeholder="Email" required></input>
         </div>
         <div className="textfield">
               <label htmlFor='password'>Senha</label>
@@ -101,7 +101,7 @@ useEffect(() =>{
             </div>
             <div className='textfield' id="dataNascimentoLabel">
                 <label htmlFor="dataNascimento">Data de nascimento: </label>
-                <input onChange={onChange} type="date" name="data_nascimento" id="dataNascimento" required />
+                <input onChange={onChange} type="date" name="data_nascimento" id="dataNascimento-register" required />
             </div>
             <div className='textfield' id='telefoneLabel'>
                 <label htmlFor="telefone">Telefone</label>
