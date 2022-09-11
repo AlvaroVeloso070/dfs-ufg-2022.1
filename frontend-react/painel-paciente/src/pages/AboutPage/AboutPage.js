@@ -14,13 +14,13 @@ export const AboutPage = () => {
             <div className='devs'>
                 <div className='dev1'>
                     <img id='foto' src="https://i.imgur.com/cq3Vele.jpg" alt="álvaro-foto" />
-                    <p id='nome'>Álvaro Veloso Lisboa</p>
+                    <p id='nome-dev'>Álvaro Veloso Lisboa</p>
                     <p id='curso'>Engenharia de Computação - UFG</p>
                     <p id='atribuições'>No projeto, atuou no desenvolvimento do Frontend <br/>e das API's REST.</p>
                 </div>
                 <div className='dev2'>
                     <img id='foto' src="https://i.imgur.com/8uMkVqr.jpg" alt="vinicius-foto" />
-                    <p id='nome'>Vinícius Ferreira de Oliveira</p>
+                    <p id='nome-dev'>Vinícius Ferreira de Oliveira</p>
                     <p id='curso'>Sistemas de Informação - UFG</p>
                     <p id='atribuições'>No projeto, atuou no desenvolvimento das API's REST.</p>
                 </div>
