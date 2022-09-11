@@ -30,6 +30,7 @@ export const CreatePaciente = ({closeCreate}) => {
     }
 
     const post = () =>{
+        console.log(user)
         fetch(url, requestOptions)
         .then(alert("O usuário foi inserido com sucesso!"))
         .catch(error => console.log(error))
@@ -53,11 +54,11 @@ export const CreatePaciente = ({closeCreate}) => {
                 </div>
                 <div className='textfield' id="dataNascimento">
                     <label htmlFor="dataNascimento">Data de nascimento: </label>
-                    <input onChange={onChange}  type="date" name="data_nascimento" id="dataNascimento-form"  />
+                    <input onChange={onChange}  type="date" name="dataNascimento" id="dataNascimento-form"  />
                 </div>
                 <div className='textfield' id="dataNascimentoLabel">
                     <label htmlFor="dataEntrada">Data de entrada: </label>
-                    <input onChange={onChange} type="date" name="data_entrada" id="dataEntrada-form"  />
+                    <input onChange={onChange} type="date" name="dataEntrada" id="dataEntrada-form"  />
                 </div>
             </div>
             <div id='lado'className='lado'>
