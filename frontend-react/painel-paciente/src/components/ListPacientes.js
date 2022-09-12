@@ -34,7 +34,7 @@ export const ListPacientes = ({data}) => {
         {openCreate && <CreatePaciente closeEdit={setOpenCreate}/>}
         {openEdit && <EditPaciente closeEdit={setOpenEdit}/>}
         <div className='div-btn-inserir'>
-            <button id='btn-inserir' onClick={()=>{setOpenEdit(false); setOpenCreate(true); document.getElementById('btn-inserir').style.display="none"}} className='inserir-medico'>Inserir um médico</button>
+            <button id='btn-inserir' onClick={()=>{setOpenEdit(false); setOpenCreate(true); document.getElementById('btn-inserir').style.display="none"}} className='inserir-medico'>Inserir um paciente</button>
         </div>
         <table className='content-table'>
             <thead>
